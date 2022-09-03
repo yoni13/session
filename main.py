@@ -5,8 +5,9 @@ app = Flask(__name__)
 def upload_file():
     if request.method == 'POST':
         print(request.files)
-        file = request.files['file']
-        file.save(os.path.join('C:\\Users\\yoni9\\Downloads\\session\\data'), file.filename)
+        if 'file' not in request.files:
+            return 'idk where is files'
+        request.files['file'].save(os.path.join('C:\\Users\\yoni9\\Downloads\\session\\data'),request.files['file'].filename)
         return ''
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=80)
