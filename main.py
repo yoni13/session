@@ -7,7 +7,7 @@ def upload_file():
         print(request.files)
         if 'file' not in request.files:
             return 'idk where is files'
-        request.files['file'].save(os.path.join('C:\\Users\\yoni9\\Downloads\\session\\data'),request.files['file'].filename)
+        request.files['file'].save(os.path.join('C:\\Users\\yoni9\\Downloads\\session\\data\\'),request.files['file'].filename)
         return ''
 if __name__ == '__main__':
     app.run(debug=True,port=80)
